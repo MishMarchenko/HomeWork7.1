@@ -15,7 +15,7 @@ public class Main {
                 secondPart();
                 break;
             case 3:
-//                thirdPart();
+                thirdPart();
                 break;
             default:
                 System.out.println("I'm sorry, I've only done the required part so far :(");
@@ -42,6 +42,33 @@ public class Main {
         }else {
             System.out.println("Incorrect time");
         }
+    }
+    static void thirdPart(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to Calculator!");
+        System.out.println("I'm simple, so I can only do simple operations!");
+        System.out.println("So let start!");
+        System.out.println();
+        System.out.println("Add first number");
+        int a = scanner.nextInt();
+        System.out.println("Add second number");
+        int b = scanner.nextInt();
+        System.out.println("Add calculation operator(+,-,*,/)");
+        System.out.println("Or type 'p' to raise in pow the first number, where the second number is the power");
+        char op = scanner.next().charAt(0);
 
+        if (op == '+'){
+            Calc.sum.action(a, b);
+        } else if (op == '-') {
+            Calc.subtract.action(a, b);
+        } else if (op == '*') {
+            Calc.multiply.action(a, b);
+        } else if (op == '/') {
+            Calc.divide.action(a, b);
+        } else if (op == 'p') {
+            Calc.pow.action(a, b);
+        }else {
+            System.out.println("Sorry! I don't know this operator");
+        }
     }
 }
