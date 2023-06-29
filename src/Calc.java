@@ -1,34 +1,29 @@
 public enum Calc {
     sum{
 
-        public void action(int a, int b) {
-            int c = a + b;
-            System.out.println(c);
+        public double action(double a, double b) {
+            return a + b;
         }
     },
     subtract{
-        public void action(int a, int b) {
-            int c = a - b;
-            System.out.println(c);
+        public double action(double a, double b) {
+            return a - b;
         }
     },
     multiply{
-        public void action(int a, int b) {
-            int c = a * b;
-            System.out.println(c);
+        public double action(double a, double b) {
+            return a * b;
         }
     },
     divide{
-        public void action(int a, int b) {
-            double c = (double) a / b;
-            System.out.println(c);
+        public double action(double a, double b) {
+            return a / b;
         }
     },
     pow{
-        public void action(int a, int b) {
-            int c = (int) Math.pow(a, b);
-            System.out.println(c);
+        public double action(double a, double b) {
+            return Math.pow(a, b);
         }
     };
-    public abstract void action(int a, int b);
+    public abstract double action(double a, double b);
 }

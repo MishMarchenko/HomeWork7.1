@@ -58,15 +58,15 @@ public class Main {
         char op = scanner.next().charAt(0);
 
         if (op == '+'){
-            Calc.sum.action(a, b);
+            System.out.println(Calc.sum.action(a, b));
         } else if (op == '-') {
-            Calc.subtract.action(a, b);
+            System.out.println(Calc.subtract.action(a, b));
         } else if (op == '*') {
-            Calc.multiply.action(a, b);
+            System.out.println(Calc.multiply.action(a, b));
         } else if (op == '/') {
-            Calc.divide.action(a, b);
+            System.out.println(Calc.divide.action(a, b));
         } else if (op == 'p') {
-            Calc.pow.action(a, b);
+            System.out.println(Calc.pow.action(a, b));
         }else {
             System.out.println("Sorry! I don't know this operator");
         }
